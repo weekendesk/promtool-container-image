@@ -3,13 +3,13 @@ container image containing the promtool CLI ( https://github.com/prometheus/prom
 
 Intended to be used in CI pipelines
 
-Dockerhub
-===
-https://hub.docker.com/r/mbenabda/promtool/
+# Build
 
-
-Makefile
-===
+#### login to the docker registry
+```
+docker login docker.weekendesk.com:5000
+```
+#### pick a command
 - Build promtool container images from a given version
 ```
 make build PROMTOOL_VERSION=v1.7.1
@@ -23,9 +23,4 @@ make publish PROMTOOL_VERSION=v1.7.1
 - Build & publish promtool container images
 ```
 make sync PROMTOOL_VERSION=v1.7.1
-```
-
-- sync promtool cointainer images missing from the promtool repos
-```
-make sync_missing_versions
 ```
