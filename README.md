@@ -10,7 +10,7 @@ Intended to be used in CI pipelines
 docker login docker.weekendesk.com:5000
 ```
 #### pick a command
-- Build promtool container images from a given version
+- Build promtool container images from a given prometheus version
 ```
 make build PROMTOOL_VERSION=v1.7.1
 ```
